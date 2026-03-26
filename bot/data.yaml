@@ -1,0 +1,72 @@
+admin_roles:
+- 1140703689640783965
+- 1377180718232375390
+- 1338285843605094493
+- 1169296274726604891
+- 1178277369723764736
+channel_id: 1369325128965558447
+dropdown_options:
+- access_roles:
+  - 1140703689640783965
+  - 1377180718232375390
+  category_id: 1284917687784571031
+  description: "\xD6ffnet ein Ticket bei der Einheitsf\xFChrung"
+  format: '{prefix}-{ticket_number}-{username}'
+  label: "Einheitsf\xFChrung"
+  ping_roles:
+  - 1140703689640783965
+  - 1377180718232375390
+  value: EF
+- access_roles:
+  - 1338285843605094493
+  category_id: 1369328262194532494
+  description: "\xD6ffnet ein Ticket bei der Verwaltungsleitung"
+  format: '{prefix}-{ticket_number}-{username}'
+  label: Verwaltungsleitung
+  ping_roles:
+  - 1338285843605094493
+  value: vwl
+- access_roles:
+  - 1338285843605094493
+  - 1169296274726604891
+  category_id: 1284721839817359391
+  description: "\xD6ffnet ein Ticket bei der Verwaltung"
+  format: '{prefix}-{ticket_number}-{username}'
+  label: Verwaltung
+  ping_roles:
+  - 1338285843605094493
+  - 1169296274726604891
+  value: vw
+- access_roles:
+  - 1338285843605094493
+  - 1169296274726604891
+  category_id: 1288262898057084928
+  description: "\xD6ffnet ein Bewerbungs-Ticket"
+  format: '{prefix}-{ticket_number}-{username}'
+  label: Bewerbung
+  ping_roles:
+  - 1338285843605094493
+  - 1169296274726604891
+  value: bw
+- access_roles:
+  - 1178277369723764736
+  category_id: 1369328728789745695
+  description: "\xD6ffnet ein Ticket bei der Fuhrparkleitung"
+  format: '{prefix}-{ticket_number}-{username}'
+  label: Fuhrparkleitung
+  ping_roles:
+  - 1178277369723764736
+  value: fp
+embed_header: '# **SUPPORT TICKETS**'
+embed_image: https://krd.nuscheltech.de/images/XsTYtQ8.png
+embed_logo: https://krd.nuscheltech.de/images/FF_Rheinstadt_Logo.png
+embed_misc_image: https://krd.nuscheltech.de/images/XsTYtQ8.png
+embed_text: "Du brauchst Unterst\xFCtzung von einer unserer Abteilungen? Dann w\xE4\
+  hle bitte die richtige Abteilung und beschreibe dein Problem oder deine Frage.\n\
+  \nBitte warte geduldig bis sich jemand deinem Ticket annimmt!"
+embed_thumbnail: https://krd.nuscheltech.de/images/FF_Rheinstadt_Logo.png
+embed_title: Freiwillige Feuerwehr Rheinstadt
+guild_id: 1113850623352389822
+log_channel: 1171174493243326534
+message_id: 1382136473280581633
+ticket_counter: 1

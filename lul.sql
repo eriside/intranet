@@ -1,0 +1,15 @@
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Mitarbeiter', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Beförderung', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Inaktive Mitarbeiter', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Eingestempelte Mitarbeiter', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Archiv', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Verwaltungsleitung', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Dokumententyp', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Stempeluhr Log', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Entwicklung', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Landesschule', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Rechnungssystem', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Changelog Senden', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'To Do', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Berechtigungen', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Ränge', '2025-03-06 17:16:07', '2025-03-06 17:16:07');
