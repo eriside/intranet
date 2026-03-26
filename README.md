@@ -96,6 +96,62 @@ In `.env.example` sind alle benoetigten Keys hinterlegt. Besonders wichtig:
 - `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN`:
 	Google Drive/Docs Zugriff fuer Dokument-Workflows
 
+## Dokumente und Google-Anbindung
+
+Die Dokumentenerstellung (z. B. Arbeitsvertraege) laeuft ueber Google Docs + Google Drive:
+
+1. Laravel erstellt mit der Google Drive API eine Kopie einer Docs-Vorlage.
+2. Platzhalter wie `{{AVAN}}` werden per Google Docs API ersetzt.
+3. Das Dokument wird als PDF exportiert.
+4. Die PDF wird lokal im Projekt gespeichert und als `dokumente`-Eintrag abgelegt.
+5. Die temporaere Datei in Google Drive wird geloescht.
+
+Die Kernlogik liegt in `app/Http/Controllers/filecreate.php`.
+
+### Einrichtung Google Cloud (einmalig)
+
+1. In der Google Cloud Console ein Projekt anlegen.
+	Link: [Google Cloud Console](https://console.cloud.google.com/)
+2. APIs aktivieren:
+	- Google Drive API
+	- Google Docs API
+	Links:
+	- [Google API Library](https://console.cloud.google.com/apis/library)
+	- [Google Drive API](https://console.cloud.google.com/apis/library/drive.googleapis.com)
+	- [Google Docs API](https://console.cloud.google.com/apis/library/docs.googleapis.com)
+3. OAuth Consent Screen konfigurieren.
+	Link: [OAuth Consent Screen](https://console.cloud.google.com/apis/credentials/consent)
+4. OAuth Client Credentials erstellen (Client ID + Client Secret).
+	Link: [Credentials](https://console.cloud.google.com/apis/credentials)
+5. Einen Refresh Token fuer den OAuth Client erzeugen.
+	Links:
+	- [OAuth 2.0 fuer Web Server (Google Docs)](https://developers.google.com/identity/protocols/oauth2/web-server)
+	- [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
+6. Werte in `.env` eintragen:
+	- `GOOGLE_CLIENT_ID`
+	- `GOOGLE_CLIENT_SECRET`
+	- `GOOGLE_REFRESH_TOKEN`
+
+Hinweis:
+Der Code nutzt aktuell OAuth (`Client ID`, `Client Secret`, `Refresh Token`).
+
+### Einrichtung Vorlagen und Zielordner
+
+1. In Google Drive eine oder mehrere Google-Docs-Vorlagen erstellen.
+	Links:
+	- [Google Docs](https://docs.google.com/)
+	- [Google Drive](https://drive.google.com/)
+2. Einen Zielordner fuer temporaere Dokumentkopien anlegen.
+	Hilfe: [Datei- und Ordner-IDs in Google Drive finden](https://developers.google.com/workspace/drive/api/guides/folder)
+3. Sicherstellen, dass der OAuth-Account Zugriff auf Vorlagen und Zielordner hat.
+	Hilfe: [Dateien und Ordner freigeben](https://support.google.com/drive/answer/2494822)
+4. In `app/Http/Controllers/filecreate.php` die IDs anpassen:
+	- `templateId` (pro Dokumenttyp)
+	- `targetFolderId` (Google Drive Zielordner)
+
+Wichtig:
+In `filecreate.php` sind diese IDs derzeit fest im Code hinterlegt und muessen bei neuen Vorlagen/Ordnern manuell aktualisiert werden.
+
 ## Discord-Bot (Python)
 
 Der Bot liegt im Ordner `bot`.
